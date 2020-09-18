@@ -4,7 +4,7 @@
     // "incremental": true,                   /* Enable incremental compilation | 增加该特性，作用是让编译过程更加快速*/
     // "tsBuildInfoFile": "./",               /* Specify file to store incremental compilation information | 指定incremental编译出来的文件路径*/
     "target": "ES5",                          /* Specify ECMAScript target version | 指定ECMAScript目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */
-    "module": "ES6",                          /* Specify module code generation | 指定模块代码生成(typescript 默认使用 es6 模块规范): 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    // "module": "ES6",                          /* Specify module code generation | 指定模块代码生成(typescript 默认使用 es6 模块规范): 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
     // "lib": [],                             /* Specify library files to be included in the compilation.| 指定要包含在编译中的库文件 */
     // "allowJs": true,                       /* Allow javascript files to be compiled. | 对于 .js 结尾的文件也进行编译(当 composite 设置为 true 时，allowJs 必须设置为 false)*/
     // "checkJs": true,                       /* Report errors in .js files. | 检查.js 文件是否有语法错误 ( allowJs: true 是 checkJs 起作用的前置条件。) */

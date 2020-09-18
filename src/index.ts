@@ -1,12 +1,9 @@
-import ArrayUtils from './array/index'
-import DateUtils from './date/index'
-import RandomUtils from './random/index'
+import * as array from './array'
+import * as date from './date'
+import * as random from './random'
 
-
-
-export {
-  ArrayUtils,
-  DateUtils,
-  RandomUtils
+export default {
+  ...array,
+  ...date,
+  ...random
 }
-

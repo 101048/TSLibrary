@@ -12,11 +12,11 @@ export default {
   // 文件入口
   input: {
     // __dirname 表示绝对路径的根路径 path.resolve则将项目的根路径和右侧的字符串合并成一个字符串
-    main: path.resolve(__dirname, './src/index.ts'),
+    utils: path.resolve(__dirname, './src/index.ts'),
   },
   // 出口
   output: {
-    dir: path.resolve(__dirname, 'dist/utils.min.js'),
+    dir: path.resolve(__dirname, 'dist'),
     /**
      *  format 打包后的规范
      *  amd – 异步模块定义，用于像RequireJS这样的模块加载器
