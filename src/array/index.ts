@@ -7,6 +7,7 @@
 type reduceObject = {
   [key in string | number]: number;
 };
+
 /**
  * description：传入数字类型的数组 找出唯一不同的元素
  * description：Pass In An Array Of Numeric Type To Find The Only Different Element
@@ -33,7 +34,30 @@ const getValueRepeat = (AimsArray: Array<number>): Object => {
     {}
   );
 };
-export {
-  searchArrayDifferent,
-  getValueRepeat
+/**
+ * description：数组乱序
+ * description：Spot Disorder
+ * @param {Array<number>} AimsArray
+ */
+const scrambled = (AimsArray: Array<number>): Array<number> => {
+  return AimsArray.sort(() => Math.random() - 0.5);
 };
+
+/**
+ * description：获取数组中的最大最小值
+ * description：
+ * @param {Array<number>} AimsArray
+ * all 同时获取,max 最大值,min 最小值
+ * @param {String} DesiredValue
+ */
+const maxAndmin = (AimsArray: Array<number>, DesiredValue: string = "all"): Array<number> | number => {
+  const maxAndminObj:any = {
+    all: () => [Math.min(...AimsArray), Math.max(...AimsArray)],
+    max: () => Math.max(...AimsArray),
+    min: () => Math.min(...AimsArray),
+  };
+  return maxAndminObj[DesiredValue]()
+};
+
+
+export { searchArrayDifferent, getValueRepeat, scrambled, maxAndmin };
