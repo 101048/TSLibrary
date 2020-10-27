@@ -39,5 +39,9 @@ const throttle = (fn: Function, delay: number): Function => {
   }
 };
 
+export {
+  CursorPositioning,
+  throttle
+}
 
 
