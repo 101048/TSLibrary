@@ -26,7 +26,7 @@ const FormatTime = (
   let index = 0;
   const resYear: RegExp = /([a-zA-Z])\1{3}/g;
   const reg: RegExp = /([a-zA-Z])\1/g;
-  Staging = Staging.map((item: any): string => {
+  Staging = Staging.map((item: string | number): string => {
     if (item < 10) {
       item = `0${item}`;
     }

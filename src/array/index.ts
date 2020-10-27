@@ -45,16 +45,16 @@ const scrambled = (AimsArray: Array<number>): Array<number> => {
 
 /**
  * description：获取数组中的最大最小值
- * description：
+ * description：Get The Maximum And Minimum Values In The Array
  * @param {Array<number>} AimsArray
  * all 同时获取,max 最大值,min 最小值
  * @param {String} DesiredValue
  */
 const maxAndmin = (AimsArray: Array<number>, DesiredValue: string = "all"): Array<number> | number => {
-  const maxAndminObj:any = {
-    all: () => [Math.min(...AimsArray), Math.max(...AimsArray)],
-    max: () => Math.max(...AimsArray),
-    min: () => Math.min(...AimsArray),
+  const maxAndminObj: {[k: string]: Function} =  {
+    all: (): Array<number> => [Math.min(...AimsArray), Math.max(...AimsArray)],
+    max: (): number => Math.max(...AimsArray),
+    min: (): number => Math.min(...AimsArray),
   };
   return maxAndminObj[DesiredValue]()
 };
