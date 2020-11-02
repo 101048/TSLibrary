@@ -11,7 +11,7 @@ type reduceObject = {
 /**
  * description：传入数字类型的数组 找出唯一不同的元素
  * description：Pass In An Array Of Numeric Type To Find The Only Different Element
- * @param {Array<number>} AimsArray
+ * @param {Array<number>} AimsArray 目标数组
  */
 const searchArrayDifferent = (AimsArray: Array<number>): number => {
   let result: number = -1;
@@ -23,7 +23,7 @@ const searchArrayDifferent = (AimsArray: Array<number>): number => {
 /**
  * description：传入数字类型的数组 输出当前数组中的重复值
  * description：Pass In An Array Of Numeric Type, Output The Duplicate Values In The Current Array
- * @param {Array<number>} AimsArray
+ * @param {Array<number>} AimsArray 目标数组
  */
 const getValueRepeat = (AimsArray: Array<number>): Object => {
   return AimsArray.reduce(
@@ -37,7 +37,7 @@ const getValueRepeat = (AimsArray: Array<number>): Object => {
 /**
  * description：数组乱序
  * description：Spot Disorder
- * @param {Array<number>} AimsArray
+ * @param {Array<number>} AimsArray 目标数组
  */
 const scrambled = (AimsArray: Array<number>): Array<number> => {
   return AimsArray.sort(() => Math.random() - 0.5);
@@ -46,9 +46,8 @@ const scrambled = (AimsArray: Array<number>): Array<number> => {
 /**
  * description：获取数组中的最大最小值
  * description：Get The Maximum And Minimum Values In The Array
- * @param {Array<number>} AimsArray
- * all 同时获取,max 最大值,min 最小值
- * @param {String} DesiredValue
+ * @param {Array<number>} AimsArray 目标数组
+ * @param {String} DesiredValue all 同时获取,max 最大值,min 最小值
  */
 const maxAndmin = (AimsArray: Array<number>, DesiredValue: string = "all"): Array<number> | number => {
   const maxAndminObj: {[k: string]: Function} =  {

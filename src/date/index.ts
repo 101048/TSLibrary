@@ -7,12 +7,12 @@
 /**
  * description： 格式化日期
  * description： Format Date
- * @param {Date} Time
- * @param {String} type
+ * @param {Date} Time   时间
+ * @param {String} Type 格式类型
  */
 const FormatTime = (
   Time: Date,
-  type: string = "yyyy-MM-dd HH:mm:ss"
+  Type: string = "yyyy-MM-dd HH:mm:ss"
 ): string => {
   let Staging: (number | string)[] = [
     Time.getFullYear(),
@@ -32,9 +32,9 @@ const FormatTime = (
     }
     return String(item);
   });
-  type = type.replace(resYear, (): string => String(Staging[0]));
-  type = type.replace(reg, (): string => String(Staging[(index += 1)]));
-  return type;
+  Type = Type.replace(resYear, (): string => String(Staging[0]));
+  Type = Type.replace(reg, (): string => String(Staging[(index += 1)]));
+  return Type;
 }
 
 export {

@@ -8,5 +8,4 @@ export default {
   ...date,
   ...random,
   ..._function
-
 }

@@ -33,7 +33,7 @@
     // "jsx": "preserve",                     /* 指定JSX代码生成: 'preserve 表示 .jsx', 'react-native 表示 .js', or 'react 表示 .js' | Specify JSX code generation */
     // "declaration": true,                   /* 产生相应的  '.d.ts' file | Generates corresponding */
     // "declarationMap": true,                /* 为每个对应的对象生成一个源映射 '.d.ts' file | Generates a sourcemap for each corresponding */
-    // "sourceMap": true,                     /* 产生相应的 '.map' file | Generates corresponding */
+    "sourceMap": true,                     /* 产生相应的 '.map' file | Generates corresponding */
     // "outFile": "./",                       /* 将所有 ts 文件编译后的代码输出到一个文件中 (当设置此选项target的值只能为amd | system) | Concatenate and emit output to single file */
     // "outDir": "./dist",                    /* 编译后的文件存放位置 | Redirect output structure to the directory */
     // "rootDir": "./",                       /* 表示编译哪个目录下的 *.ts 文件，但实际操作时发现即便 *.ts 文件不在 rootDir 规定的目录内，也能够编译。typescript 期待我们将源文件全部放到 rootDir 配置的目录下 | Specify the root directory of input files. Use to control the output directory structure with --outDir */

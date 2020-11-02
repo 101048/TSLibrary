@@ -8,7 +8,7 @@
  * description：  解决当使用 contenteditable 时光标一直在最前面的问题
  * description：  Solve The Cursor Problem When Using Contenteditable
  *
- * @param {HTMLElement} Element
+ * @param {HTMLElement} Element 目标元素
  */
 const CursorPositioning = (Element: HTMLElement) => {
   // 该方法用于设置焦点，如果被指定的元素可以获取到焦点，焦点就回被设置到该元素上
@@ -23,18 +23,18 @@ const CursorPositioning = (Element: HTMLElement) => {
 
 /**
  * description:  函数节流（n 秒内回调函数只会被执行一次，先执行后计算）
- * @param {Function} fn
- * @param {number} delay
+ * @param {Function} Fn  需要节流的方法
+ * @param {number} Delay 毫秒数
  */
-const throttle = (fn: Function, delay: number): Function => {
+const throttle = (Fn: Function, Delay: number): Function => {
   // 每次重新进来赋值为null 
   let timer: unknown = null;
   return function (this: unknown , options: Array<unknown>):void {
     if(!timer) {
       timer = setTimeout( ():void => {
         timer = null
-        fn.apply(this, options)
-      },delay)
+        Fn.apply(this, options)
+      },Delay)
     }
   }
 };
@@ -43,5 +43,3 @@ export {
   CursorPositioning,
   throttle
 }
-
-
