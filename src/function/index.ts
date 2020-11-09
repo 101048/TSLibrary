@@ -7,7 +7,6 @@
 /**
  * description：  解决当使用 contenteditable 时光标一直在最前面的问题
  * description：  Solve The Cursor Problem When Using Contenteditable
- *
  * @param {HTMLElement} Element 目标元素
  */
 const CursorPositioning = (Element: HTMLElement) => {
@@ -39,7 +38,36 @@ const throttle = (Fn: Function, Delay: number): Function => {
   }
 };
 
+/**
+ * description:  函数防抖（保证一个函数在多少毫秒内不在被触发，只执行一次）
+ * @param {Function} Fn  需要延时毫秒后执行的函数
+ * @param {number} Delay 延迟执行毫秒数
+ * @param {Boolean} immediate true 表示立即执行 false 表示非立即执行
+ */
+const debounce = (Fn: Function, Delay: number, immediate: boolean = false) => {
+  let timer: number;
+  let status = true;
+  if(!immediate) {
+    return function (this: unknown , options: Array<unknown>):void {
+      if(timer) window.clearTimeout(timer);
+      timer = window.setTimeout( ():void => {
+        Fn.apply(this,options)
+      },Delay)
+    }
+  } else {
+    return function(this: unknown , options: Array<unknown>):void {
+      window.clearTimeout(timer);
+      if (status) {
+        status = false;
+        Fn.apply(this, options);
+      }
+      timer = window.setTimeout(() => status = true, Delay);
+    }
+  }
+}
+
 export {
   CursorPositioning,
-  throttle
+  throttle,
+  debounce
 }
