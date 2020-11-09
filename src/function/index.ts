@@ -25,7 +25,7 @@ const CursorPositioning = (Element: HTMLElement) => {
  * @param {Function} Fn  需要节流的方法
  * @param {number} Delay 毫秒数
  */
-const throttle = (Fn: Function, Delay: number): Function => {
+const Throttle = (Fn: Function, Delay: number): Function => {
   // 每次重新进来赋值为null 
   let timer: unknown = null;
   return function (this: unknown , options: Array<unknown>):void {
@@ -44,7 +44,7 @@ const throttle = (Fn: Function, Delay: number): Function => {
  * @param {number} Delay 延迟执行毫秒数
  * @param {Boolean} immediate true 表示立即执行 false 表示非立即执行
  */
-const debounce = (Fn: Function, Delay: number, immediate: boolean = false) => {
+const Debounce = (Fn: Function, Delay: number, immediate: boolean = false) => {
   let timer: number;
   let status = true;
   if(!immediate) {
@@ -68,6 +68,6 @@ const debounce = (Fn: Function, Delay: number, immediate: boolean = false) => {
 
 export {
   CursorPositioning,
-  throttle,
-  debounce
+  Throttle,
+  Debounce
 }
