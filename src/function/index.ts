@@ -44,7 +44,7 @@ const Throttle = (Fn: Function, Delay: number): Function => {
  * @param {number} Delay 延迟执行毫秒数
  * @param {Boolean} immediate true 表示立即执行 false 表示非立即执行
  */
-const Debounce = (Fn: Function, Delay: number, immediate: boolean = false) => {
+const Debounce = (Fn: Function, Delay: number, immediate: boolean = false):Function => {
   let timer: number;
   let status = true;
   if(!immediate) {

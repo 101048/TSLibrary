@@ -31,7 +31,7 @@
     // "allowJs": true,                       /* 对于 .js 结尾的文件也进行编译(当 composite 设置为 true 时，allowJs 必须设置为 false) | Allow javascript files to be compiled */
     // "checkJs": true,                       /* 检查.js 文件是否有语法错误 ( allowJs: true 是 checkJs 起作用的前置条件。) | Report errors in .js files */
     // "jsx": "preserve",                     /* 指定JSX代码生成: 'preserve 表示 .jsx', 'react-native 表示 .js', or 'react 表示 .js' | Specify JSX code generation */
-    // "declaration": true,                   /* 产生相应的  '.d.ts' file | Generates corresponding */
+    "declaration": true,                   /* 产生相应的  '.d.ts' file | Generates corresponding */
     // "declarationMap": true,                /* 为每个对应的对象生成一个源映射 '.d.ts' file | Generates a sourcemap for each corresponding */
     "sourceMap": true,                     /* 产生相应的 '.map' file | Generates corresponding */
     // "outFile": "./",                       /* 将所有 ts 文件编译后的代码输出到一个文件中 (当设置此选项target的值只能为amd | system) | Concatenate and emit output to single file */
