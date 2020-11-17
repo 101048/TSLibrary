@@ -1,6 +1,6 @@
 {
   "name": "library-ts-pan",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A library written in TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,12 +13,10 @@
   "author": "panzhenying",
   "license": "ISC",
   "dependencies": {
-    "@types/typescript": "^2.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.27.2",
-    "typescript": "^4.0.5"
+    "rollup-plugin-typescript2": "^0.27.2"
   },
   "devDependencies": {
     "@types/jest": "^26.0.15",

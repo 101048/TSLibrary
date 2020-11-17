@@ -12,7 +12,7 @@ export default {
   // 文件入口
   input: {
     // __dirname 表示绝对路径的根路径 path.resolve则将项目的根路径和右侧的字符串合并成一个字符串
-    utils: path.resolve(__dirname, './src/index.ts'),
+    index: path.resolve(__dirname, './src/index.ts'),
   },
   // 出口
   output: {
@@ -27,7 +27,7 @@ export default {
      *  system – SystemJS加载器格式
      */
     format: 'umd',
-    // 生成包名称
+    // 生成对象名
     name: 'utils',
     // 全局模块
     globals: {},
